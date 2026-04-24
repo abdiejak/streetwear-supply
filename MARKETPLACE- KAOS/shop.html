@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STREETWEAR SUPPLY - Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-website active">
+        <div class="grain-overlay"></div>
+        
+        <!-- NAVBAR -->
+        <nav class="navbar scrolled">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>STREET<span>WEAR</span></h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="shop.html" class="nav-link active">SHOP</a>
+                    <a href="brands.html" class="nav-link">BRANDS</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="search-trigger" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="cart.html" class="cart-trigger">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                    <div class="menu-burger" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SEARCH OVERLAY -->
+        <div class="search-overlay" id="searchOverlay">
+            <button class="search-close" onclick="toggleSearch()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-content">
+                <input type="text" id="searchInput" placeholder="SEARCH PRODUCTS..." autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>SHOP ALL</h1>
+                <p>Discover our complete collection</p>
+            </div>
+        </section>
+
+        <!-- FILTER BAR -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="filter-item">
+                        <label>BRAND:</label>
+                        <select id="brandFilter" onchange="filterProducts()">
+                            <option value="all">All Brands</option>
+                            <option value="Supreme">Supreme</option>
+                            <option value="Stussy">Stussy</option>
+                            <option value="Bape">Bape</option>
+                            <option value="Off-White">Off-White</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>SORT BY:</label>
+                        <select id="sortFilter" onchange="filterProducts()">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products akan di-generate oleh JS -->
+                </div>
+        <!-- PAGINATION -->
+<div class="pagination" id="productsPagination"></div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h2>STREET<span>WEAR</span></h2>
+                    <p>Authentic streetwear culture since 2024</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>SHOP</h4>
+                        <a href="shop.html">New Arrivals</a>
+                        <a href="shop.html">Best Sellers</a>
+                        <a href="shop.html">Sale</a>
+                        <a href="brands.html">Collections</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>INFO</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#" onclick="contactWhatsApp()">Contact</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>LEGAL</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 STREETWEAR SUPPLY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- PRODUCT MODAL -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-overlay" onclick="closeProductModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProductModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="productDetail">
+                <!-- Product detail generated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

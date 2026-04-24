@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STREETWEAR SUPPLY - Brands</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-website active">
+        <div class="grain-overlay"></div>
+        
+        <!-- NAVBAR -->
+        <nav class="navbar scrolled">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>STREET<span>WEAR</span></h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="shop.html" class="nav-link">SHOP</a>
+                    <a href="brands.html" class="nav-link active">BRANDS</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="search-trigger" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="cart.html" class="cart-trigger">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                    <div class="menu-burger" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SEARCH OVERLAY -->
+        <div class="search-overlay" id="searchOverlay">
+            <button class="search-close" onclick="toggleSearch()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-content">
+                <input type="text" id="searchInput" placeholder="SEARCH PRODUCTS..." autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>OUR BRANDS</h1>
+                <p>Premium streetwear brands we carry</p>
+            </div>
+        </section>
+
+        <!-- BRANDS SHOWCASE -->
+       <section class="brands-section">
+    <div class="brands-grid">
+        <a href="shop.html?brand=Supreme" class="brand-item" data-brand="supreme">
+            <div class="brand-bg">SUPREME</div>
+            <div class="brand-overlay">
+                <h3>SUPREME</h3>
+                <span>VIEW COLLECTION</span>
+            </div>
+        </a>
+        <a href="shop.html?brand=Stussy" class="brand-item" data-brand="stussy">
+            <div class="brand-bg">STUSSY</div>
+            <div class="brand-overlay">
+                <h3>STUSSY</h3>
+                <span>VIEW COLLECTION</span>
+            </div>
+        </a>
+        <a href="shop.html?brand=Bape" class="brand-item" data-brand="bape">
+            <div class="brand-bg">BAPE</div>
+            <div class="brand-overlay">
+                <h3>A BATHING APE</h3>
+                <span>VIEW COLLECTION</span>
+            </div>
+        </a>
+        <a href="shop.html?brand=Off-White" class="brand-item" data-brand="offwhite">
+            <div class="brand-bg">OFF-WHITE</div>
+            <div class="brand-overlay">
+                <h3>OFF-WHITE</h3>
+                <span>VIEW COLLECTION</span>
+            </div>
+        </a>
+    </div>
+    <a href="brands.html?selected=Supreme&page=1" class="brand-item" data-brand="supreme">
+    <!-- content -->
+</a>
+
+<a href="brands.html?selected=Stussy&page=1" class="brand-item" data-brand="stussy">
+    <!-- content -->
+</a>
+
+<a href="brands.html?selected=Bape&page=1" class="brand-item" data-brand="bape">
+    <!-- content -->
+</a>
+
+<a href="brands.html?selected=Off-White&page=1" class="brand-item" data-brand="offwhite">
+    <!-- content -->
+</a>
+    <!-- SELECTED BRAND PRODUCTS -->
+    <div class="brand-products-section" id="brandProductsSection" style="display:none;">
+        <div class="section-header">
+            <h2 class="section-title" id="selectedBrandTitle">BRAND</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="products-container">
+            <div class="products-grid" id="brandProductsGrid"></div>
+            <div class="pagination" id="brandPagination"></div>
+        </div>
+    </div>
+</section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h2>STREET<span>WEAR</span></h2>
+                    <p>Authentic streetwear culture since 2024</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>SHOP</h4>
+                        <a href="shop.html">New Arrivals</a>
+                        <a href="shop.html">Best Sellers</a>
+                        <a href="shop.html">Sale</a>
+                        <a href="brands.html">Collections</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>INFO</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#" onclick="contactWhatsApp()">Contact</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>LEGAL</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 STREETWEAR SUPPLY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

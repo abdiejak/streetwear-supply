@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN LOGIN - STREETWEAR SUPPLY</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+
+    <div class="login-container">
+        <div class="login-brand">
+            <h1>STREET<span>WEAR</span></h1>
+            <p>ADMIN PANEL</p>
+        </div>
+
+        <div class="login-box">
+            <div class="login-icon">
+                <i class="fas fa-lock"></i>
+            </div>
+            <h2>SIGN IN</h2>
+            <p class="login-subtitle">Access your store dashboard</p>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="login-form-group">
+                    <label>USERNAME</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input 
+                            type="text" 
+                            id="adminUsername" 
+                            placeholder="Enter username"
+                            required
+                            autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="login-form-group">
+                    <label>PASSWORD</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input 
+                            type="password" 
+                            id="adminPassword" 
+                            placeholder="Enter password"
+                            required>
+                        <button type="button" 
+                                class="toggle-pass" 
+                                onclick="togglePassword()">
+                            <i class="fas fa-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-error" id="loginError">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Invalid username or password!</span>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <span>SIGN IN</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <a href="../index.html" class="back-to-store">
+                <i class="fas fa-arrow-left"></i> Back to Store
+            </a>
+        </div>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

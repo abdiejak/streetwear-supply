@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STREETWEAR SUPPLY - About</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-website active">
+        <div class="grain-overlay"></div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar scrolled">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html"><h1>STREET<span>WEAR</span></h1></a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="shop.html" class="nav-link">SHOP</a>
+                    <a href="brands.html" class="nav-link">BRANDS</a>
+                    <a href="about.html" class="nav-link active">ABOUT</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="search-trigger" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="cart.html" class="cart-trigger">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                    <div class="menu-burger" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-link">HOME</a>
+            <a href="shop.html" class="mobile-link">SHOP</a>
+            <a href="brands.html" class="mobile-link">BRANDS</a>
+            <a href="about.html" class="mobile-link active">ABOUT</a>
+        </div>
+
+        <!-- SEARCH OVERLAY -->
+        <div class="search-overlay" id="searchOverlay">
+            <button class="search-close" onclick="toggleSearch()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-content">
+                <input type="text" id="searchInput" 
+                       placeholder="SEARCH PRODUCTS..." 
+                       autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>ABOUT US</h1>
+                <p>Our story, our culture, our passion</p>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about-section">
+            <div class="about-container">
+
+                <!-- About Hero -->
+                <div class="about-hero">
+                    <div class="about-hero-content">
+                        <div class="about-label">EST. 2024</div>
+                        <h2 class="about-title">
+                            <span>DEFINING</span>
+                            <span>STREETWEAR</span>
+                            <span>CULTURE</span>
+                        </h2>
+                        <p class="about-subtitle">
+                            We bring you the most authentic and exclusive 
+                            streetwear brands from around the globe.
+                        </p>
+                    </div>
+                    <div class="about-hero-image">
+                        <div class="about-image-grid">
+                            <div class="about-img-item">🎨</div>
+                            <div class="about-img-item">👕</div>
+                            <div class="about-img-item">🔥</div>
+                            <div class="about-img-item">⚡</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Story -->
+                <div class="about-story">
+                    <div class="story-number">01</div>
+                    <div class="story-content">
+                        <h3>OUR STORY</h3>
+                        <p>
+                            Founded in 2024, STREETWEAR SUPPLY was born from a passion 
+                            for authentic street culture. We believe that fashion is more 
+                            than just clothing—it's a lifestyle, an attitude, and a way 
+                            to express yourself. Our mission is to bring the world's most 
+                            coveted streetwear brands to Indonesia, making premium quality 
+                            accessible to everyone who shares our passion.
+                        </p>
+                        <p>
+                            Every piece in our collection is carefully curated to ensure 
+                            authenticity and quality. We work directly with authorized 
+                            distributors and brands to guarantee that what you get is 
+                            100% genuine. No fakes, no replicas—just pure streetwear 
+                            excellence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- About Values -->
+                <div class="about-values">
+                    <div class="story-number">02</div>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>100% AUTHENTIC</h4>
+                            <p>Every product is guaranteed authentic. 
+                               We only work with authorized distributors 
+                               and verified brands.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h4>FAST SHIPPING</h4>
+                            <p>We ship nationwide with fast and secure 
+                               delivery. Your order will arrive safely 
+                               at your doorstep.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h4>SECURE PAYMENT</h4>
+                            <p>Multiple payment options with guaranteed 
+                               security. Shop with confidence and 
+                               peace of mind.</p>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>24/7 SUPPORT</h4>
+                            <p>Our customer service team is always ready 
+                               to help you. Contact us anytime 
+                               via WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Stats -->
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="10000">0</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Products Sold</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">Premium Brands</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Cities Reached</div>
+                    </div>
+                </div>
+
+                <!-- About Brands List -->
+                <div class="about-brands-list">
+                    <div class="story-number">03</div>
+                    <div class="brands-list-content">
+                        <h3>BRANDS WE CARRY</h3>
+                        <p>We partner with the world's most iconic 
+                           streetwear brands to bring you exclusive 
+                           collections.</p>
+                        <div class="brands-logos">
+                            <div class="brand-logo-item" 
+                                 onclick="window.location='shop.html?brand=Supreme'">
+                                SUPREME
+                            </div>
+                            <div class="brand-logo-item"
+                                 onclick="window.location='shop.html?brand=Stussy'">
+                                STUSSY
+                            </div>
+                            <div class="brand-logo-item"
+                                 onclick="window.location='shop.html?brand=Bape'">
+                                BAPE
+                            </div>
+                            <div class="brand-logo-item"
+                                 onclick="window.location='shop.html?brand=Off-White'">
+                                OFF-WHITE
+                            </div>
+                            <div class="brand-logo-item">PALACE</div>
+                            <div class="brand-logo-item">KITH</div>
+                            <div class="brand-logo-item">FEAR OF GOD</div>
+                            <div class="brand-logo-item">ESSENTIALS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About CTA -->
+                <div class="about-cta">
+                    <h3>GOT QUESTIONS?</h3>
+                    <p>Our team is here to help. Reach out anytime.</p>
+                    <div class="about-cta-buttons">
+                        <button class="btn-primary" 
+                                onclick="contactWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> CONTACT US
+                        </button>
+                        <a href="shop.html" class="btn-outline">
+                            SHOP NOW
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h2>STREET<span>WEAR</span></h2>
+                    <p>Authentic streetwear culture since 2024</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>SHOP</h4>
+                        <a href="shop.html">New Arrivals</a>
+                        <a href="shop.html">Best Sellers</a>
+                        <a href="shop.html">Sale</a>
+                        <a href="brands.html">Collections</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>INFO</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#" onclick="contactWhatsApp()">Contact</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>LEGAL</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 STREETWEAR SUPPLY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

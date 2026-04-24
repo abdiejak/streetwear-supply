@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STREETWEAR SUPPLY - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splashScreen" class="splash-screen active">
+        <div class="grain-overlay"></div>
+        <div class="glitch-container">
+            <div class="glitch-text" data-text="STREETWEAR">STREETWEAR</div>
+            <div class="glitch-text glitch-text-sub" data-text="SUPPLY">SUPPLY</div>
+        </div>
+        <div class="splash-loader">
+            <div class="loader-bar"></div>
+            <div class="loader-text">LOADING<span class="dots"></span></div>
+        </div>
+        <div class="splash-enter" onclick="enterSite()">
+            <span class="enter-text">ENTER SITE</span>
+            <div class="enter-arrow">→</div>
+        </div>
+        <div class="year-tag">EST. 2024</div>
+    </div>
+
+    <!-- MAIN WEBSITE -->
+    <div id="mainWebsite" class="main-website">
+        <div class="grain-overlay"></div>
+        
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>STREET<span>WEAR</span></h1>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">HOME</a>
+                    <a href="shop.html" class="nav-link">SHOP</a>
+                    <a href="brands.html" class="nav-link">BRANDS</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="search-trigger" onclick="toggleSearch()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <a href="cart.html" class="cart-trigger">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                    <div class="menu-burger" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SEARCH OVERLAY -->
+        <div class="search-overlay" id="searchOverlay">
+            <button class="search-close" onclick="toggleSearch()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="search-content">
+                <input type="text" id="searchInput" placeholder="SEARCH PRODUCTS..." autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-bg">
+                <div class="hero-bg-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-label">NEW COLLECTION 2024</div>
+                <h1 class="hero-title">
+                    <span class="title-word">AUTHENTIC</span>
+                    <span class="title-word">STREETWEAR</span>
+                    <span class="title-word">CULTURE</span>
+                </h1>
+                <div class="hero-cta">
+                    <a href="shop.html" class="btn-primary">SHOP NOW</a>
+                    <a href="brands.html" class="btn-outline">EXPLORE</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>SCROLL</span>
+            </div>
+        </section>
+
+        <!-- FEATURED PRODUCTS -->
+        <section class="featured-section">
+            <div class="section-header">
+                <h2 class="section-title">FEATURED PRODUCTS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="container">
+                <div class="products-grid" id="featuredProducts">
+                    <!-- Featured products akan di-generate oleh JS -->
+                </div>
+                <div class="view-all-wrapper">
+                    <a href="shop.html" class="btn-outline">VIEW ALL PRODUCTS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMO BANNER -->
+        <section class="promo-banner">
+            <div class="promo-content">
+                <h2>EXCLUSIVE MEMBER ACCESS</h2>
+                <p>Sign up now and get 15% off your first order</p>
+                <button class="btn-primary" onclick="contactWhatsApp()">JOIN NOW</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h2>STREET<span>WEAR</span></h2>
+                    <p>Authentic streetwear culture since 2024</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>SHOP</h4>
+                        <a href="shop.html">New Arrivals</a>
+                        <a href="shop.html">Best Sellers</a>
+                        <a href="shop.html">Sale</a>
+                        <a href="brands.html">Collections</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>INFO</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="#" onclick="contactWhatsApp()">Contact</a>
+                        <a href="#">Shipping</a>
+                        <a href="#">Returns</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>LEGAL</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 STREETWEAR SUPPLY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
